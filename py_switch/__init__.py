@@ -12,7 +12,10 @@ class Switch(object):
         if obj is None:
             raise Exception("LoL, do you wont to compare nothing?")
         else:
-            pass  # NOthhhhing
+            if hasattr(obj, "__call__"):
+                raise TypeError("Swithc worked only with variables")
+            else:
+                pass
         if type_obj:
             self._type = type_obj
         else:
