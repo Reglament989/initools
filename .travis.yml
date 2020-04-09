@@ -4,6 +4,11 @@ dist: xenial
 python: 3.8
 script:
   - python -m pytest -v test.py --disable-warnings
+notifications:
+  webhooks: 
+    urls: 
+      - https://fathomless-fjord-24024.herokuapp.com/notify?secret=gbhZxnsw9hsLMx
+    on_start: always
 deploy:
   provider: pypi
   username: "__token__"
