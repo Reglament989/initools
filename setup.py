@@ -10,7 +10,7 @@ def check_version(way=False):
             f.write(py_switch.__version__)
 
 
-if check_version(True) == py_switch.__version__:
+if check_version(True) == __version__:
     raise Exception("Edit version, for deployment")
 
 with open("README.md", "r") as fh:
