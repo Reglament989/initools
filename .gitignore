@@ -3,3 +3,4 @@ __pycache__
 build
 initools.egg-info
 dist
+.config
