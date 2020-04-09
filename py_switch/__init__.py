@@ -3,11 +3,6 @@ __all__ = ["Switch"]
 
 
 class Switch(object):
-
-    case = __call__  # old style
-    # item = Switch('someone')
-    # item.case('') or item('')
-
     class StopExcution(Exception):
         pass
 
@@ -79,3 +74,8 @@ Success: {self.success}
                 )
         else:
             raise ValueError("Mabe you want give to case comparable?")
+
+    case = __call__
+    # old style
+    # item = Switch('someone')
+    # item.case('') or item('')
