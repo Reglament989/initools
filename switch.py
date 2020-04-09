@@ -1,5 +1,5 @@
 
-class IniSwitch():
+class Switch():
     def __init__(self, obj=None, type_obj=None, attempts=None, on_success=None, on_fail=None):
         if obj is None:
             raise Exception('LoL, do you wont to compare nothing?')

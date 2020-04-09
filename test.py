@@ -1,4 +1,4 @@
-from switch import IniSwitch
+from switch import Switch
 import random, logging, unittest
 
 logging.basicConfig(
@@ -7,7 +7,7 @@ logging.basicConfig(
 )
 
 def test_basic():
-    item = IniSwitch(random.randrange(0,20))
+    item = Switch(random.randrange(0,20))
     while True:
         if item.case(random.randrange(0,20)):
             return
@@ -17,7 +17,7 @@ def test_basic():
     logging.info(f"Tested item [basic]: {item}")
 
 def test_attempts():
-    item = IniSwitch(random.randrange(0,20), attempts=random.randrange(0,15))
+    item = Switch(random.randrange(0,20), attempts=random.randrange(0,15))
     while True:
         try:
             if item.case(random.randrange(0,20)):
@@ -32,7 +32,7 @@ def test_attempts():
     logging.info(f"Tested item [attempts]: {item}")
 
 def test_on_success():
-    item = IniSwitch(random.randrange(0,20), on_success=function_on_success)
+    item = Switch(random.randrange(0,20), on_success=function_on_success)
     while True:
         if item.case(random.randrange(0,20)):
             return
@@ -42,7 +42,7 @@ def test_on_success():
     logging.info(f"Tested item [on_success]: {item}")
 
 def test_on_fail():
-    item = IniSwitch(random.randrange(0,20), on_fail=function_on_fail)
+    item = Switch(random.randrange(0,20), on_fail=function_on_fail)
     while True:
         if item.case(random.randrange(0,20)):
             return
@@ -52,7 +52,7 @@ def test_on_fail():
     logging.info(f"Tested item [on_fail]: {item}")
 
 def test_together():
-    item = IniSwitch(random.randrange(0,20),
+    item = Switch(random.randrange(0,20),
         on_success=function_on_success,
         on_fail=function_on_fail,
         attempts=random.randrange(0,15))
