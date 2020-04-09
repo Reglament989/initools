@@ -4,3 +4,9 @@ dist: xenial
 python: 3.8
 script:
   - python -m pytest -v test.py --disable-warnings
+deploy:
+  provider: pypi
+  user: "__token__"
+  password:
+    secure: "iQPeBzmpNzPwqxUyJKQloNJY8raXc0BOJ7BamDKzul4ydEaLRi/zsoQOUJsch0px1Y0GwwB8hBYCuZpjXnnuOIPbVZQ6FsPLfpI3scwMRK90hytJre4C1hxgs9cTFYWWL2j0Oewv4arBDeCu+vTDFqnVP+Scpbizr9tW/yGnSOdi5sCucJhyUW4DD7mfBfheMGFA5kgKlWhlNKz+zvaDtR0W8DWrzlN6npGI2HzD0veFmCv/jsxP+UNIg7rK7x0kbXg61JOWKYDpBHLZWpERywvXRqens5totYsUanV+KvseZMpEfZkpGqcHYAn+W1PnHcXdKkOVDlJM3NwSn0jZ9bLLxIYSEfocWWUxg8cMKvwn2WWvydwa0NZoqsj3F/yeEVF/zj+JuC0rbdtDeIPH1mVVs1+UJAdxWDl8TLLggKRHXe6XUau8gEv8QZiAqeYwbtuNdbhpzRHMgfhEBHS/CSaey/EaWQJu2CwClhNmSn8T2a7z60Az5ZdkMT2//EQemQd+/B2rQQbfynG7GMfWQC80sD9yErXK9CK0SM6c0IgShuh1WauiH0Rl5NXHXzUGXx6LZ4+s/eGpStAO9uCkRNrOENEx/hJJVcLhwbNKnmoDBs3VjHbPn+8guGxQ/PIL78cPAcSSTjw3g/va+8PwG2XYnP6PPxn1VnpfqLsVPrQ="
+
