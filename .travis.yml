@@ -1,0 +1,6 @@
+language: python
+os: linux
+dist: xenial
+python: 3.8
+script:
+  - python -m pytest -v test.py --disable-warnings
